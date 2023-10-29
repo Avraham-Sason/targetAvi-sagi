@@ -2,7 +2,8 @@ const crypto = require('crypto');
 const jsonwebtoken = require('jsonwebtoken');
 const fs = require('fs');
 const path = require('path');
-const pathToKey = path.join(__dirname, '../certs', 'private.pem');
+// const pathToKey = path.join(__dirname, '../certs', 'private.pem');
+const pathToKey = path.join(__dirname, 'private.pem');
 const PRIV_KEY = fs.readFileSync(pathToKey, 'utf8');
 
 /**

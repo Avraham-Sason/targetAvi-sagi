@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 let publicKEY;
 try{
-    publicKEY = fs.readFileSync(path.join(__dirname, '../../DL/certs', 'public.pem'), 'utf8');
+    // publicKEY = fs.readFileSync(path.join(__dirname, '../../DL/certs', 'public.pem'), 'utf8');
+    publicKEY = fs.readFileSync(path.join(__dirname, 'public.pem'), 'utf8');
 }
 catch(error){
     console.log(error);
