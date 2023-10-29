@@ -1,6 +1,7 @@
 import axios from "axios"
 //  axios.defaults.baseURL = "https://target-pedagogy.com"
- axios.defaults.baseURL = "http://localhost:8080"      
+//  axios.defaults.baseURL = "http://localhost:8080"      
+ axios.defaults.baseURL = "https://target-app-3.onrender.com/"      
 
 
 
