@@ -13,7 +13,8 @@ router.get("/:id",checkToken,checkIsAdmin,readOne)
 router.delete("/avi/:id",deleteFunAvi)
 router.delete("/:id",checkToken,checkIsAdmin,deleteFun)
 // POST
-router.post("/",checkToken,checkIsAdmin, createFun );
+// router.post("/",checkToken,checkIsAdmin, createFun );
+router.post("/", createFun );
 // PUT
 router.put("/resetpassword/:email", getPasswordS)
 router.put("/update/:email",checkToken,checkIsAdmin,updateFun)

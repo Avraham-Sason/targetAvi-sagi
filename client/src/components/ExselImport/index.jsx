@@ -13,11 +13,12 @@ const ExselImport = ({objectKeys,actinId,setDisplay}) => {
       e.preventDefault();
       const validFile =file.name.split(".")[1] ==="xlsx" ||file.name.split(".")[1] ==="XSLX"
       if (validFile){
-          let fileData = new FormData()
-          fileData.append("file",file)
-          fileData.append("objectKeys",JSON.stringify(objectKeys))
+        let fileData = new FormData()
+        fileData.append("file",file)
+        fileData.append("objectKeys",JSON.stringify(objectKeys))
           apiCalls.post(`/files/importexsle/${actinId}`,fileData)
           .then(response => {
+            console.log(response);
             setDisplay(prev=>!prev)
             setDisplayBtu(false)
           })

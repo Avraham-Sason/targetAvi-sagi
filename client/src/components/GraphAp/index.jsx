@@ -234,8 +234,7 @@ export default function GraphAp() {
     return (
         <>
 
-            <div className={styles['carousel-container']}>
-
+            {allTasks.length?<div className={styles['carousel-container']}>
                 <Slider
                     {...settings}>
 
@@ -506,7 +505,10 @@ export default function GraphAp() {
                 </Slider >
 
 
-            </div >
+            </div >:<div id={styles.messageH2}>
+                <h2>אין משימות פעילות עדיין...</h2>
+                <p>כאן יוצגו גרפים של משימות פעילות פר מחלקות</p>
+            </div>}
         </>
     )
 }

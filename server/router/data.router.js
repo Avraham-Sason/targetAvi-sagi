@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const{updateByTitleFun, readFun}=require('../BL/services/data.services')
+const{updateByTitleFun, readFun ,createFun}=require('../BL/services/data.services')
 const { checkToken, checkIsTargetTeam } = require("../BL/middlewares/auth.checkToken")
 
 
@@ -56,16 +56,16 @@ module.exports = router
 //     }
 // })
 
-// router.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
 // router.post('/', checkToken, checkIsTargetTeam, async (req, res) => {
-//     try {
-//         let data = await createFun(req.body)
-//         res.send(data)
-//     } catch (error) {
-//         console.log(error);
-//         res.status(400).send(error)
-//     }
-// })
+    try {
+        let data = await createFun(req.body)
+        res.send(data)
+    } catch (error) {
+        console.log(error);
+        res.status(400).send(error)
+    }
+})
 
 // router.put("/:id", async (req, res) => {
 // router.put("/:id", checkToken, checkIsTargetTeam, async (req, res) => {

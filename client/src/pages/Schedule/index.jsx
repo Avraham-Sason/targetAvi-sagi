@@ -32,7 +32,6 @@ const Schedule = () => {
           </div>
           ))
     }, [display]);
-    
     const handleSubmit = (e) => {
         e.preventDefault();
         let updatedData = {
@@ -83,15 +82,16 @@ const Schedule = () => {
 
     const formToPopUp =
         <form onSubmit={handleSubmit} className={`center formToPopUp`}>
-            <label>תאריך</label>
-            <input name="dateInStr" defaultValue={new Date().toISOString().split("T")[0]} type="date" />
             <label>מס' שיעור</label>
             <input name="classNum" defaultValue={idToEdit.classNum} type="number" />
+            <label>תאריך</label>
+            <input name="dateInStr" defaultValue={idToEdit.date?.split("T")[0] || new Date().toISOString().split("T")[0]} type="date" />
+      
             <label>שעות לימוד</label>
             <input name="numOFOuers" defaultValue={idToEdit.numOFOuers} type="text" />
             <label>מורה</label>
-            <select name="lecturer">
-                {allData.admins.map((v,i)=>{
+            <select name="lecturer" defaultValue={idToEdit.lecturer?._id}>
+                {allData.admins?.map((v,i)=>{
                     return <option key={i} value={v._id}>{v.name}</option>
                 })}
             </select>

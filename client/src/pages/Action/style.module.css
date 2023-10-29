@@ -14,8 +14,10 @@
     gap: 15px;
 }
 .header h3{
+    color: rgb(235, 22, 22);
     margin: 0 ;
     font-weight: 650;
+    font-size: 30px;
 }
 .header h4{
     font-size: 25px;

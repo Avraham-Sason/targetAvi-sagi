@@ -18,8 +18,12 @@ const updateByTitleFun = async (title, newdata) => {
     return data
 }
 
-
-module.exports = {updateByTitleFun, readFun }
+const createFun = async (newdata) => {
+    let data = await create(newdata)
+    if (!data) throw "no data found "
+    return data
+}
+module.exports = {updateByTitleFun, readFun ,createFun }
 
 // const deleteFun = async (id) => {
 //     let data = await deleteOne(id)
@@ -33,11 +37,7 @@ module.exports = {updateByTitleFun, readFun }
     //     return data
     // }
     
-// const createFun = async (newdata) => {
-//     let data = await create(newdata)
-//     if (!data) throw "no data found "
-//     return data
-// }
+
 
 
 // module.exports = {updateByTitleFun, deleteFun, readFun, updateFun, createFun }

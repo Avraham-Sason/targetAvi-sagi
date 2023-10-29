@@ -136,9 +136,10 @@ router.post('/importexsle/:id', upload.single("file"), async (req, res) => {
             delete object.num
             return { student: object, num: v.num }
         })
-        const updateData = await Promise.all(data.map((v) => {
+        const updateData = await Promise.all(data.map(v => {
             return createNestedFun(v, "actions", id).then(res => res);
         }));
+        console.log(data);
         res.status(200).send(updateData);
 
     } catch (error) {

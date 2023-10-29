@@ -10,7 +10,7 @@ import apiCalls from '../../functions/apiCalls'
 
 
 function MessageBoard() {
-
+    console.log(new Date());
     const context = useContext(DataContext)
 
     const [adsData, setAdsData] = useState();
@@ -72,7 +72,7 @@ function MessageBoard() {
                   <h4>שגיאה: {err.response.status}</h4>
                   <p>הודעה: {err.response.data.msg}</p>
               </div>
-              ))
+            ))
     };
 
     const addOrUpdatAd = (e, index, ad) => {

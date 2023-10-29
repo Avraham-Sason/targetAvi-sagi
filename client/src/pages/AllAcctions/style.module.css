@@ -4,6 +4,8 @@
     height: 100%;
     flex-direction: column;
     gap: 30px;
+    justify-content: start !important;
+    padding-top: 10%;
 }
 .haeder{
     width: 100%;
@@ -38,7 +40,7 @@
     position: relative;
     overflow: auto;
     flex-direction: column !important;
-    
+
 }
 .tableSelf td{
     padding: 4px 20px;
@@ -50,6 +52,7 @@
 
 .tableSelf tbody{
     width: 100%;
+    
 }
 
 .tableSelf>tbody>tr:first-child{

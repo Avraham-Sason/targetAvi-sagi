@@ -37,8 +37,8 @@ const Students = () => {
     }, [display]);
 
     useEffect(() => {
-        setEditStudent(idToEdit.email?true:false)
-        idToEdit.email && setPopUp(formToPopUp)
+        setEditStudent(idToEdit.name?true:false)
+        idToEdit.name && setPopUp(formToPopUp)
     }, [idToEdit,editStudent])
 
 
