@@ -72,7 +72,7 @@ const Action = () =>{
     apiCalls.post(`actions/`,data)
     .then(res=>{
         const element = document.createElement("a")
-        element.setAttribute("href", `https://target-pedagogy.com/#/action/${res._id}`)
+        element.setAttribute("href", `https://target-app-3.onrender.com/${res._id}`)
         element.click()
         setPopUp("הפעולה נשמרה בהצלחה 😀")        
         // update fundingSource
